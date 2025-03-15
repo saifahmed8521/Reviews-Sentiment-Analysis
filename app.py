@@ -173,11 +173,7 @@ elif button:
 
         st.subheader("Word Cloud")
         wordcloud = create_wordcloud(reviews)
-        st.set_option('deprecation.showPyplotGlobalUse', False)
-        plt.imshow(wordcloud, interpolation='bilinear')
-        plt.axis("off")
-        plt.show()
-        st.pyplot()
+        st.image(wordcloud.to_array(), use_container_width=True)
         
 
 
